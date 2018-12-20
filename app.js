@@ -6,6 +6,8 @@ let app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended : true}));
+
+
 apiRoutes(app);
 
 let server = app.listen(process.env.PORT || 5000, () => {

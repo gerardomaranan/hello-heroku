@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello Heroku</title>
+</head>
+
+<body>
+    <h1>Hello Heroku</h1>
+    <p>This is a sample web API.</p>
+    <p>You will be redirected in <span>10</span>!</p>
+
+    <script>
+        let counter = 10;
+        setInterval(() => {
+            counter--;
+            document.querySelector("span").innerText = counter;
+            if (counter == 0) window.location.href = "/users";
+        }, 1000);
+        
+    </script>
+</body>
+
+</html>

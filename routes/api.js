@@ -1,9 +1,11 @@
+const path = require("path");
 let users = require("../datastore/users.js");
+
 
 const api = app => {
     // Setting Default Route
     app.get("/", (request, response) => {
-        response.redirect("/users");
+        response.sendFile(path.join(__dirname + "/../views/index.html"));
     });
 
     // Get Users
